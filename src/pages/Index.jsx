@@ -25,8 +25,8 @@ const Index = () => {
   if (error) return <div className="text-center text-red-500">Error fetching stories</div>;
 
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <h1 className="text-4xl font-bold mb-8 text-center">Hacker News Top 100</h1>
+    <div className="min-h-screen bg-gray-300 p-8">
+      <h1 className="text-4xl font-bold mb-8 text-center text-gray-800">Hacker News Top 100</h1>
       <Input
         type="text"
         placeholder="Search stories..."
@@ -48,12 +48,12 @@ const Index = () => {
               </Card>
             ))
           : filteredStories?.map((story) => (
-              <Card key={story.objectID} className="w-full">
+              <Card key={story.objectID} className="w-full bg-white">
                 <CardHeader>
-                  <CardTitle className="text-lg">{story.title}</CardTitle>
+                  <CardTitle className="text-lg text-gray-800">{story.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-gray-500 mb-2">Upvotes: {story.points}</p>
+                  <p className="text-sm text-gray-600 mb-2">Upvotes: {story.points}</p>
                   <Button
                     variant="link"
                     className="p-0"
